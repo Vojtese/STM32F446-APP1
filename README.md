@@ -2,7 +2,7 @@
 
 This repository contains the primary application firmware for the STM32F446-based signal acquisition unit, developed as part of a rainwater retention system. The firmware is designed to acquire, process, and transmit sensor data from an underground tank to a central unit via RS-485.
 
-It is tightly integrated with the bootloader and supports in-application programming (IAP), allowing firmware updates to be received and flashed while the application is running.
+It supports in-application programming (IAP), allowing firmware updates to be received and flashed while the application is running, without rebooting into the bootloader.
 
 ---
 
@@ -15,9 +15,9 @@ It is tightly integrated with the bootloader and supports in-application program
   - Voltage and current sensing
 - Signal conditioning and filtering
 - RS-485 communication using UART + DMA
-- In-application programming (IAP) support
+- In-application programming (IAP) via UART or RS485
 - Bootloader jump compatibility
-- CRC validation and watchdog integration (optional)
+- CRC validation and watchdog integration
 
 ---
 
@@ -36,6 +36,7 @@ It is tightly integrated with the bootloader and supports in-application program
 
 - `Core/` – Application logic and sensor routines
 - `Drivers/` – STM32 LL drivers
+- `iap.c` – In-application programming logic
 - `.ioc` – STM32CubeMX configuration
 - `STM32F446RETX_FLASH.ld` – Linker script for App1 memory region
 - `docs/` – Diagrams and hardware images
