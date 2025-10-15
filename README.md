@@ -48,7 +48,7 @@ It is tightly integrated with the bootloader and supports in-application program
 
 This version supports in-application programming. The application can receive firmware packets via UART or RS485, validate them, and flash a new application image without rebooting into the bootloader.
 
-![APP IAP Flow](docs/img/SWdesignv1.eps)
+![APP IAP Flow](docs/img/SWdesignv1.svg)
 
 ---
 
